@@ -1,7 +1,5 @@
 comments:
   service: giscus
-  # giscus
-  # https://giscus.app/zh-CN
   giscus:
     src: https://giscus.app/client.js
     data-repo: CHminggao/CHminggao.github.io.giscus # [在此输入仓库]
