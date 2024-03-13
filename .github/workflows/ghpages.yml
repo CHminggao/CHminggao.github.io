@@ -3,6 +3,7 @@ name: Pages
 on:
   push:
     branches: ["main"] # default branch
+    workflow_dispatch:
 concurrency:
   group: "pages"
   cancel-in-progress: false
