@@ -1,0 +1,44 @@
+name: Pages
+
+on:
+  push:
+    branches:
+      - master # default branch
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          ref: master
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 2    # Fetch all history for .GitInfo and .Lastmod
+      - name: Use Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "19.x"
+      - name: Cache NPM dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: |
+          # ls
+          # ls source/_posts
+          # npm exec hexo clean --safe
+          # npm exec hexo list post --safe
+          # npm exec hexo g --debug --safe
+          npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
