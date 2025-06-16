@@ -592,10 +592,10 @@ hexo-theme-landscape@^1.1.0:
   resolved "https://registry.yarnpkg.com/hexo-theme-landscape/-/hexo-theme-landscape-1.1.0.tgz#756335efcc8abd240170f16f36c4af5c4c51c739"
   integrity sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==
 
-hexo-theme-stellar@^1.30.1:
-  version "1.30.1"
-  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.30.1.tgz#b0621bc0ea8721ceeb3ef01200c8a4323a6147a9"
-  integrity sha512-+3WEqUJ5rYhsvFWo5iyDhWK9Dlq8Q5Yk/Ytx4IRRJNr1LKFXHV+MMMIICVov95cyokVMS/9g+gcDvS9uu+cV0A==
+hexo-theme-stellar@^1.30.2:
+  version "1.30.2"
+  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.30.2.tgz#1abbe570f9ceca23ccfa1bf4f92fff8e418f4565"
+  integrity sha512-9RWFe8yoknfZ6GcNpF309AQOYIpeZoz5tDhdSZaqKnOJ4mQjKbD6yean80SnmIt8xP/otincf4P1FOz+5QZWTw==
   dependencies:
     hexo-renderer-ejs "^2.0.0"
     hexo-renderer-stylus "^3.0.1"
