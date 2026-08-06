@@ -3,25 +3,25 @@ name: Pages
 on:
   push:
     branches:
-      - master # default branch
+      - main # default branch
 
 jobs:
-  pages:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-        with: 
-          ref: master
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 2    # Fetch all history for .GitInfo and .Lastmod
-      - name: Use Node.js 24.x
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
         with:
-          node-version: "24.x"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: "24"
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache
@@ -30,15 +30,21 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: |
-          # ls
-          # ls source/_posts
-          # npm exec hexo clean --safe
-          # npm exec hexo list post --safe
-          # npm exec hexo g --debug --safe
-          npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
