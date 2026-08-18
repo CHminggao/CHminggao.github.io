@@ -713,7 +713,7 @@ hexo-log@^4.0.1, hexo-log@^4.1.0:
   dependencies:
     picocolors "^1.0.0"
 
-hexo-pagination@3.0.0:
+hexo-pagination@3.0.0, hexo-pagination@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-3.0.0.tgz"
   integrity sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==
@@ -762,13 +762,14 @@ hexo-theme-landscape@^1.1.0:
   resolved "https://registry.npmjs.org/hexo-theme-landscape/-/hexo-theme-landscape-1.1.0.tgz"
   integrity sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==
 
-hexo-theme-stellar@^1.39.1:
-  version "1.39.1"
-  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.39.1.tgz#90824c7c95ee413385a72e03f8c791462cb15aa0"
-  integrity sha512-Bh5+ZiGoHvVaJepyA+PJ2Z92hWlcSFmTvygjsRK1VN8Nv4QLCE92EhrWayGqOM9DoStbJOznuPoCTig+g+xJgQ==
+hexo-theme-stellar@^1.40.0:
+  version "1.40.0"
+  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.40.0.tgz#84ee7dc33b7d6a5fe226c651b7a29d199ea4e6b8"
+  integrity sha512-z5TF+9sPzEAdcF0mKK9gSrkqH8pZ/0WhPmncFYY6YveN1ObV5g7CekM9RFGrTsZOp4V/lwXkDafdLbXuiI1bjg==
   dependencies:
     cheerio "^1.1.0"
     glob "^10.4.0"
+    hexo-pagination "^3.0.0"
     hexo-renderer-ejs "^2.0.0"
     hexo-renderer-stylus "^3.0.1"
     probe-image-size "^7.2.3"
