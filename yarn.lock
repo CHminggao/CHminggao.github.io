@@ -762,10 +762,10 @@ hexo-theme-landscape@^1.1.0:
   resolved "https://registry.npmjs.org/hexo-theme-landscape/-/hexo-theme-landscape-1.1.0.tgz"
   integrity sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==
 
-hexo-theme-stellar@^1.41.0:
-  version "1.41.0"
-  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.41.0.tgz#c5856086d608d9f9c8550e6060d59cef41c7e89c"
-  integrity sha512-wrV3BAsKBpt+gNQYe2pcaz9gxeVCeJy4qgp4XxnY5b+Qb7M0Zu0+Xc75WvyxUipNX6aEYu5eCodLwJtDgFzkbA==
+hexo-theme-stellar@^1.42.1:
+  version "1.42.1"
+  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.42.1.tgz#86adb947a4971ed654be2125bc4e3c78c434021d"
+  integrity sha512-qEsEMPS5WhaYdj/71VwRGV0g10hl5iyO5mh6k/LxjAZkAayfAXoKz7alDtfgGuY4KpMCs6LeHHkHYtlUOUf8pw==
   dependencies:
     cheerio "^1.1.0"
     glob "^10.4.0"
